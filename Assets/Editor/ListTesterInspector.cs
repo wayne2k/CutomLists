@@ -6,10 +6,10 @@ public class ListTesterInspector : Editor {
 
 	public override void OnInspectorGUI () {
 		serializedObject.Update();
-		EditorGUILayout.PropertyField(serializedObject.FindProperty("integers"), true);
-		EditorGUILayout.PropertyField(serializedObject.FindProperty("vectors"), true);
-		EditorGUILayout.PropertyField(serializedObject.FindProperty("colorPoints"), true);
-		EditorGUILayout.PropertyField(serializedObject.FindProperty("objects"), true);
+		EditorList.Show(serializedObject.FindProperty("integers"));
+		EditorList.Show(serializedObject.FindProperty("vectors"));
+		EditorList.Show(serializedObject.FindProperty("colorPoints"));
+		EditorList.Show(serializedObject.FindProperty("objects"));
 		serializedObject.ApplyModifiedProperties();
 	}
 }
